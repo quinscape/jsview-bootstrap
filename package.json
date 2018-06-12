@@ -1,0 +1,16 @@
+{
+  "name": "jsview-bootstrap",
+  "version": "0.0.1",
+  "description": "Bootstrap helper for jsview application",
+  "main": "index.js",
+  "author": "Sven Helmberger",
+  "license": "-",
+  "private": true,
+  "peerDependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "dependencies": {
+    "domready": "^1.0.8"
+  }
+}
