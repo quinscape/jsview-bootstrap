@@ -11,14 +11,14 @@ var domready = require("domready")
 module.exports = function (renderFn, cb) {
     domready(
         function () {
-                const elem = document.getElementById("root-data");
-                const data = !!elem && JSON.parse(elem.innerHTML);
+            const elem = document.getElementById("root-data");
+            const data = !!elem && JSON.parse(elem.innerHTML);
 
-                const element = renderFn(data);
+            Promise.resolve(renderFn(data)).then(function (element) {
 
                 if (element !== false && !React.isValidElement(element))
                 {
-                    throw new Error("Render function returned no React Element, but "  + element);
+                    throw new Error("Render function returned no React Element, but " + element);
                 }
 
                 render(
@@ -26,6 +26,7 @@ module.exports = function (renderFn, cb) {
                     document.getElementById("root"),
                     cb
                 );
+            });
         }
     );
 }
