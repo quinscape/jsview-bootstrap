@@ -1,6 +1,6 @@
-var React = require("react")
-var render = require("react-dom").render;
-var domready = require("domready")
+let React = require("react");
+let render = require("react-dom").render;
+let domready = require("domready");
 
 /**
  * Bootstrap function that mounts a react element on a node #root
@@ -18,7 +18,7 @@ module.exports = function (renderFn, cb) {
 
                 if (element !== false && !React.isValidElement(element))
                 {
-                    throw new Error("Render function returned no React Element, but " + element);
+                    throw new Error("Render function returned no  React Element, but " + element);
                 }
 
                 render(
@@ -26,7 +26,8 @@ module.exports = function (renderFn, cb) {
                     document.getElementById("root"),
                     cb
                 );
-            });
+            })
+            .catch( err => console.error("Bootstrap Error: ", err));
         }
     );
-}
+};
