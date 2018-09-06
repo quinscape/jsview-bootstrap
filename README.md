@@ -1,6 +1,6 @@
 # JsView Bootstrap
 
-Application bootstrap for [spring-jsview](https://intern.quinscape.de/bitbucket/projects/XCD/repos/spring-jsview/browse)
+Application bootstrap for [spring-jsview](https://github.com/quinscape/spring-jsview)
 
 ## Usage
 
