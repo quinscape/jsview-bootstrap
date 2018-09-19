@@ -6,7 +6,7 @@ let domready = require("domready");
  * Bootstrap function that mounts a react element on a node #root
  *
  * @param {function} renderFn render function
- * @param {function} cb     callback to call after rendering
+ * @param {function} [cb]     callback to call after rendering
  */
 module.exports = function (renderFn, cb) {
     domready(
