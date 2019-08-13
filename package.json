@@ -1,6 +1,6 @@
 {
   "name": "jsview-bootstrap",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Bootstrap helper for spring-jsview application",
   "main": "index.js",
   "author": "Sven Helmberger",
